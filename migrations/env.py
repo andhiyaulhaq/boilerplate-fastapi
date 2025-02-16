@@ -8,7 +8,6 @@ from sqlalchemy import engine_from_config, pool
 from sqlmodel import SQLModel
 
 import db.models as models
-from src import EnvConfig
 
 # this is the Alembic Config object, which provides
 # access to the values within the .ini file in use.
