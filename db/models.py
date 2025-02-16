@@ -29,8 +29,8 @@ class User(SQLModel, table=True):
     )
     username: str = Field(unique=True, index=True, nullable=False)
     email: str = Field(unique=True, index=True, nullable=False)
-    first_name: str
-    last_name: str
+    first_name: str = Field(nullable=False)
+    last_name: str = Field(nullable=False)
     password: str = Field(nullable=False, exclude=True)
     role: RoleEnum = Field(default=RoleEnum.USER, nullable=False)
     is_verified: bool = Field(default=False)
